@@ -1,5 +1,14 @@
 ## วิธีทำ DNAT บน FortiGate (LAN to LAN)
 
+```mermaid
+flowchart LR
+    PC["PC<br>172.20.14.4"] --- F["Firewall<br>Fortigate"]
+    F -.- G("Dummy Server<br>172.23.1.2")
+    F --- S["Server<br>172.21.1.3"]
+
+    style G stroke-width:2px,stroke-dasharray: 2
+```
+
 ### 1. สร้าง Virtual IP (VIP)
 ไปที่ `Policy & Objects > Virtual IPs` แล้วกด `Create New`:
 - Name: เช่น `DNAT_172.23.1.2_to_172.21.1.3`
