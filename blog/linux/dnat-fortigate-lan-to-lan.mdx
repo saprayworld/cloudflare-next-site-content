@@ -44,7 +44,7 @@ flowchart LR
 
 ไปที่ `Policy & Objects > IPv4 Policy` แล้วกด `Create New`:
 - Incoming Interface: Interface จาก LAN ฝั่งต้นทาง (`172.20.0.0/24`)
-- Outgoing Interface: Interface ไปยังปลายทางจริง (`172.0.1.0/24`)
+- Outgoing Interface: Interface ไปยังปลายทางจริง (`172.20.1.0/24`)
 - Source: ระบุ `172.20.0.100` หรือ subnet ที่เกี่ยวข้อง
 - Destination: เลือก VIP ที่สร้างไว้ (`DNAT_172.20.18.2_to_172.20.1.8`)
 - Service: ตามต้องการ เช่น `ALL` หรือเฉพาะ port ที่ต้องการ
