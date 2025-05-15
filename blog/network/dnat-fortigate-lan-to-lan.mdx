@@ -30,7 +30,7 @@ flowchart LR
 
 ### 1. สร้าง Virtual IP (VIP)
 
-![FG-VM64-KVM-001.png](https://static.sapray.net/medias/FG-VM64-KVM-001.png)
+![สร้าง DNAT Virtual IP](https://static.sapray.net/medias/FG-VM64-KVM-001.png)
 
 ไปที่ `Policy & Objects > Virtual IPs` แล้วกด `Create New`:
 - Name: เช่น `DNAT_172.20.18.2_to_172.20.1.8`
@@ -40,7 +40,7 @@ flowchart LR
 
 ### 2. สร้าง Firewall Policy
 
-![FG-VM64-KVM-002.png](https://static.sapray.net/medias/FG-VM64-KVM-002.png)
+![สร้าง Firewall Policy สำหรับ DNAT](https://static.sapray.net/medias/FG-VM64-KVM-002.png)
 
 ไปที่ `Policy & Objects > IPv4 Policy` แล้วกด `Create New`:
 - Incoming Interface: Interface จาก LAN ฝั่งต้นทาง (`172.20.0.0/24`)
@@ -53,7 +53,7 @@ flowchart LR
 
 ### 3. ทำ Static Route แบบ Dummy (Optional)
 
-![FG-VM64-KVM-003.png](https://static.sapray.net/medias/FG-VM64-KVM-003.png)
+![สร้าง Static Route สำหรับ DNAT](https://static.sapray.net/medias/FG-VM64-KVM-003.png)
 
 ในกรณีที่ปลายทางไม่มีอยู่จริง `172.20.18.2` เราต้องสร้าง Static Route ด้วย โดยชี้ไปที่ Default Gateway `0.0.0.0`  
 ไปที่ `Network > Static Routes` แล้วกด `Create New`:
